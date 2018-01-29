@@ -1,0 +1,595 @@
+---
+title: "De l'open data au big data"
+subtitle: "Culture générale des données"
+author: "Samuel Goëta"
+date: "Paris, 29 janvier 2018"
+output:
+  xaringan::moon_reader:
+    css: [default, xaringan.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+
+---
+class: center, middle
+
+Ces slides en ligne : http://datactivist.coop/datalitteracy/
+
+Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+<img src="./img/Logo_DATACTIVIST_TW.png" height="150px" />
+---
+class:middle
+# Programme de la matinée
+
+Workshop 1 — Qu’est ce qu’une donnée ? Exercice d’identification, définition et étymologie du terme
+
+Petite histoire sociale des données et de leur exploitation
+
+Datafication : les promesses de la mise en données du monde
+
+Données, données… quelles données ? Quantitatives, qualitatives, structurées, non structurées, capturées, échappées, dérivées…
+
+Open data, big data, linked data, data API : les habits neufs de la donnée
+
+---
+class:middle
+# Programme de l'après-midi
+
+Poursuite de "Open data, big data, linked data, data API : les habits neufs de la donnée
+"
+
+Cadre juridique et protection de la vie privée
+
+Modèles économiques de l’open data et du big data
+
+Workshop 3 — analyse du modèle économique d’entreprises de la data
+---
+class:middle, center
+## Echauffement : 5 minutes, 20 données
+
+Vous avez 5 minutes
+
+Vous devez trouver 20 données dans notre environnement immédiat
+
+Pas de recours aux écrans !
+
+.footnote[[source](http://infolabs.io/5-minutes-20-donnees)]
+
+---
+class:center,inverse, middle
+# Qu'est-ce qu'une donnée ?
+---
+class:center,inverse, middle
+#D'après vous ?
+---
+# Le censeur à Rome, ancêtre de la statistique
+.reduite3[![](img/asterix.png)]
+
+.footnote[Source : *Asterix chez les pictes*, © Albert René 2013]
+---
+# Le censeur à Rome, ancêtre de la statistique
+.reduite3[![](img/asterix1.png)]
+
+.footnote[*Asterix chez les pictes*, © Albert René 2013]
+---
+## La statistique : outil de gouvernement et de preuve
+.pull-left[.middle[La statistique est à la fois :
+
+  + **outil de gouvernement** (_Statistik_ - 18e siècle), et
+  
+  
+  + **outil de preuve** (_statistics_ - 19e siècle)]]
+.pull-right[![center](./img/desrosieres1.jpg)]
+---
+  
+## [Quantifier, c'est convenir puis mesurer](http://www.pressesdesmines.com/media/extrait/PourSocioHistExtr.pdf)
+
+.pull-left[
+> Le verbe quantifier est employé ici dans un sens large : **exprimer et
+faire exister sous une forme numérique ce qui, auparavant, était exprimé par
+des mots et non par des nombres**.]
+
+.pull-right[![ ](img/desrosi.jpeg)]
+---
+## [Quantifier, c'est convenir puis mesurer](http://www.pressesdesmines.com/media/extrait/PourSocioHistExtr.pdf)
+
+.middle.reduite3[
+![](img/asterix2.png)
+]
+
+.footnote[*Asterix chez les pictes*, © Albert René 2013]
+---
+## Quantifier, c'est inscrire et figer une réalité sans cesse mouvante
+.reduite2[![](img/asterix3.png)]
+
+.footnote[*Asterix chez les pictes*, © Albert René 2013]
+
+---
+## Etymologie
+
+### Latin : _dare_ (donner) > _datum_ (donné) > _data_ (donnés)
+<br/><br/>
+Ce qui est évident, va de soi, est accepté sans discussion
+
+<br/><br/>
+
+> From its first vernacular formulation, the existence of a datum has been independent of any
+consideration of corresponding ontological truth. When a fact is proven false, it ceases
+to be a fact. False data is data nonetheless.
+
+.footnote[[Rosenberg, 2013](https://mitpress.mit.edu/books/raw-data-oxymoron)]
+---
+class:middle
+## Usage de "data"
+
+.pull-left[
+Le sens moderne apparaît à la fin du 18e siècle. 
+
+Renvoie à des expériences, des collectes d'éléments.]
+.pull-right[![](img/data.png)]
+---
+# “Datafication” : la mise en données du monde
+> “L'immense gisement de données numériques découle de la capacité à paramétrer des aspects du monde et de la vie humaine qui n'avaient encore jamais été quantifiés. On peut qualifier ce processus de **« mise en données » (datafication)**. 
+
+> […] “La mise en données désigne autre chose que la numérisation, laquelle consiste à traduire un contenu analogique - texte, film, photographie - en une séquence de 1 et de 0 lisible par un ordinateur. Elle se réfère à une action bien plus vaste, et aux implications encore insoupçonnées : **numériser non plus des documents, mais tous les aspects de la vie**.”
+
+.footnote[[Kenneth Cukier, “Mise en données du monde, le déluge numérique”](https://www.monde-diplomatique.fr/2013/07/CUKIER/49318)]
+---
+# “Datafication” : la mise en données du monde
+> “L'immense gisement de données numériques découle de la capacité à paramétrer des aspects du monde et de la vie humaine qui n'avaient encore jamais été quantifiés. On peut qualifier ce processus de **« mise en données » (datafication)**. 
+
+> […] “La mise en données désigne autre chose que la numérisation, laquelle consiste à traduire un contenu analogique - texte, film, photographie - en une séquence de 1 et de 0 lisible par un ordinateur. Elle se réfère à une action bien plus vaste, et aux implications encore insoupçonnées : **numériser non plus des documents, mais tous les aspects de la vie**.”
+
+.footnote[[Kenneth Cukier, “Mise en données du monde, le déluge numérique”](https://www.monde-diplomatique.fr/2013/07/CUKIER/49318)]
+---
+
+# La "nombrification" du monde
+.pull-left[![](https://cefres.hypotheses.org/files/2017/06/couv_REY.jpg)]
+.pull-right[
+> La numérisation ne serait pas survenue sans une "nombrification" préalable qui consiste à quantifier de plus en plus d'aspects de notre expérience du réel.
+
+
+> **Au commencement était le verbe, il semble à la fin que tout devient nombre.**
+
+
+> Personne ne saurait parler sérieusement de l'état de la société et discuter politique sans se référer aux informations quantitatives. ]
+
+---
+class:middle
+# Le nouveau positivisme des données
+> *If you asked me to describe the rising philosophy of the day, I’d say it is **data-ism**. 
+We now have the ability to gather huge amounts of data. 
+This ability seems to carry with it certain cultural assumptions — that everything that can be measured should be measured; that data is a transparent and reliable lens that allows us to filter out emotionalism and ideology; that data will help us do remarkable things — like foretell the future.*
+
+
+Jeff Brookes, éditorialiste du New York Times
+
+---
+## Aux sources de la mise en données du monde
+.pull-left[
+- Rencontre, dans la Californie des années 1960, entre la Nouvelle Gauche et les Nouveaux Communalistes sur fond de LSD et de recherche militaire
+
+
+- L'inspiration de la cybernétique (N. Wiener) : objets techniques et êtres humains constituent un même système sociotechhnique, régulé par l'information
+
+
+- Exemple de Steward Brand, fondateur du _Whole Earth Catalog_ puis de Wired => ["Forest Gump de l'Internet"](https://questionsdecommunication.revues.org/8619)]
+.pull-right[
+![ ](./img/wholeearthcatalog.jpg)]
+
+---
+## "Raw data" is an oxymoron
+.pull-left[
+> Data are always already “cooked” and never entirely “raw.”
+
+> Data need to be imagined _as_ data to exist and function as such, and the imagination of data entails an interpretive base.]
+.pull-right[
+![](https://mitpress.mit.edu/sites/default/files/9780262518284_0.jpg)]
+
+.footnote[[Source](https://mitpress.mit.edu/books/raw-data-oxymoron)]
+---
+class:inverse, middle, center
+# Vers une définition des données
+---
+
+## La pyramide Data-Information-Knowledge-Wisdom
+.pull-left[
+[![largeur](./img/DIKW_Pyramid.svg)](https://commons.wikimedia.org/w/index.php?curid=37705247)
+]
+
+.pull-right[Attribuée à [Russell Ackoff](http://en.wikipedia.org/wiki/Russell_L._Ackoff), 1989
+
+Les données peuvent être des :
+
+- faits
+- signal/stimulis
+- symboles]
+
+---
+# Vers une définition des données
+.pull-left.reduite2[
+![](img/kitchin.jpg)
+]
+.pull-right[
+> *Data are commonly understood to be the raw material produced by **abstracting the world** into categories, measures and other representational forms – numbers, characters, symbols, images,sounds, electromagnetic waves, bits – that constitute the **building blocks** from which information and knowledge are created.*
+
+⏺ enregistrabilité
+
+🏗> briques de base ("*buildings blocks*")]
+
+---
+class:middle
+# Data or capta ?
+
+> *Technically, then, what we understand as data are actually **capta** (derived from the Latin capere, meaning ‘to take’); those units of data that have been selected and harvested from the sum of all potential data.*
+
+[Kitchin, 2014](https://books.google.fr/books?hl=fr&lr=&id=GfOICwAAQBAJ&oi=fnd&pg=PP1&dq=kitchin+data+revolution&ots=pcyfMTZh-V&sig=dQyPTL3AIN_4RdWvtBFw4VjdAa4#v=onepage&q=kitchin%20data%20revolution&f=false)
+
+---
+class:middle
+# Données ou obtenues ? 
+
+
+> « Décidément, on ne devrait jamais parler de “données”, mais toujours d’ “obtenues”. » 
+
+Bruno Latour, 1993
+
+---
+
+class:center, middle, inverse
+# Données, données... quelles données ?
+
+---
+## Données quantitatives
+.pull-left[
+Différents types de variables : 
+- nominale : des catégories que l’on nomme avec un nom (marié/célibataire/divorcé/veuf)
+
+
+- ordinale : échelle de mesure dotant chaque élément d'une valeur qui permet leur classement par ordre de grandeur (faible, moyen, fort)
+
+
+- intervalles : l’intervalle entre deux catégories à toujours la même valeur (12-16°C / 16-20°C / 20-24 °C …)
+
+]
+.pull-right[
+![](img/spread.png)
+]
+---
+# Données qualitatives
+.pull-left[
+Non numérique => texte, image, vidéo, son, musique...
+
+  + peut être convertie en données quantitatives
+
+  + risque de perdre la richesse des données originales
+  
+  + analyse qualitative de données
+  
+]
+.pull-right[
+![](img/text_mining_intro_2.png)
+]
+
+---
+# Exemple : les annotations en text mining
+
+.reduite[![](img/annotation.png)]
+
+---
+## Données structurées
+
+.pull-left[
+Des données dotées d'un modèle qui définit les relations entre les composantes de la base de données
+
+  + Ex : base de données relationnelle SQL
+  
+  + Lisibles machine
+  
+  + Faciles à analyser, manipuler, visualiser...
+]
+.pull-right[
+![](img/sql.jpeg)
+]
+
+---
+# Données semi-structurées
+.pull-left[
+Pas de modèle prédéfini : structure irrégulière, implicite... mais données organisées néanmoins, ensemble raisonnable de champs
+
+Exemple : XML, JSON
+
+Possible de trier, ordonner et structurer les données
+]
+.pull-right[
+![](img/OCDSjson.jpg)
+]
+
+---
+# Données non structurées
+.pull-left[Pas de structure commune identifiable
+Exemple : BDD NoSQL
+
+Généralement qualitatives
+
+Difficilement combinées ou analysées quantitativement
+
+Les données non structurées croitraient 15x plus que les données structurées
+ 
+Machine learning de + en + capable d'analyser ces données.]
+
+.pull-right[
+![](img/structured-vs-unstructured-data.png)
+]
+
+---
+# Données capturées, échappées, transitoires 
+
+** Données capturées**
+
+Observation, enquête, expérimentation, prise de notes, senseurs... => intention de générer des données
+
+** Données échappées**
+
+Sous-produit d'un engin ou d'un système dont la fonction première est autre
+
+** Données transitoires**
+
+Echappées qui ne sont jamais examinées, transformées ou analysées
+
+
+---
+## Données dérivées
+
+Résultat d'un traitement ou une analyse supplémentaire de données capturées. 
+
+Exemple avec les [données de Google Maps](https://www.justinobeirne.com/google-maps-moat) : 
+
+
+![](https://static1.squarespace.com/static/54ff63f0e4b0bafce6932642/t/5a383fdb41920241ebce859d/1513635810327/3-1+-+Making+AOIs.gif?format=1500w)
+
+---
+## Données dérivées
+
+.reduite2[![](./img/nasa.jpg)]
+---
+##Index, attributs, métadonnées
+
+**index**
+
+Des données permettent l'identification et la mise en relation. Essentiels pour enrichir les données
+
+**Attributs**
+
+Des données représentent les aspects d'un phénomène, mais ne sont pas des index (pas identifiants uniques)
+
+**Métadonnées**
+
+Des données sur les données. Peuvent être descriptives, structurelles ou administratives. Standard : Dublin Core. 
+
+---
+#Les données crowdsourcées
+.pull-left[Des données produites par des citoyens, des communs partagés et gouvernés par leurs producteurs
+
+
+Exemple : OpenStreetMap, le wiki de la carte]
+
+.pull-right[
+.reduite[![](img/osm.png)]
+]
+---
+class:inverse, middle, center
+# De l'open data au big data
+
+---
+## Open data : quelques jalons historiques
+![](img/chrono.png)
+
+---
+# 07 Décembre 2007 : la rencontre de Sebastopol 
+.pull-left[
+👥 **Quoi ?** Une rencontre de l'Open Governement Group à Sebastopol (Californie), siège des éditions O'Reilly
+
+🎯 **Pourquoi ?** : Influencer le futur président des Etats Unis pour faire avancer l'open data
+
+📜 **Comment ?** En adoptant une déclaration définissant les grands principes de l'Open Government Data 
+
+
+]
+.pull-right[
+![](img/photofamille.jpg)
+]
+---
+class:middle, center
+![](img/session.jpg)
+# Revue des principes
+
+---
+class: middle, center
+
+# 1. Des données complètes
+### Toutes les données publiques doivent être rendues disponibles dans les limites légales liées à la vie privée ou la sécurité
+---
+class: center, middle
+![](img/OPENDATA.jpg)
+# BY DEFAULT
+---
+class: middle, center
+
+# 2. Des données primaires
+###  Les données ouvertes sont telles que collectées à la source, non-agrégées avec le plus haut niveau de granularité
+
+---
+class: middle, center
+
+# 3. Des données fraiches (*timely*)
+### Les données doivent être disponibles dès qu'elles sont produites
+
+---
+class: middle, center
+
+# 4. Des données accessibles 
+### Les données doivent être utilisables par le plus grand nombre d’usagers potentiels
+
+---
+class: middle, center
+
+# 5. Des données exploitables par les machines 
+###  Les données peuvent être traitées automatiquement par les machines
+
+---
+class: middle, center
+
+# 6.Des données non discriminatoires 
+### Elles peuvent être utilisées par tous sans réclamer un enregistrement préalable
+---
+class: middle, center
+
+# 7. Des données dans un format ouvert
+### Ce format ne doit pas être la propriété d'une organisation en particulier (.xls) et doit être gouvernée par ses usagers
+
+---
+class: middle, center
+
+# 8. Des données dans une licence ouverte
+### Idéalement dans le domaine public sinon dans une licence conforme à l'[Open Definition](www.opendefinition.org) : Licence Ouverte (CC-BY) ou ODBL (CC-BY-SA)
+
+---
+# Défi 1 : la découvrabilité des données
+.pull-left[
+> Data findability is a major challenge. We have data portals and registries, but government agencies under one national government still publish data in different ways and different locations.(…)
+**Data findability is a prerequisite for open data to fulfill its potential and currently most data is very hard to find.** 
+]
+
+.pull-right[
+![](https://index.okfn.org/images/Datagapsclean.jpg)
+
+.footnote[https://index.okfn.org/insights/]
+]
+
+---
+class:middle, center
+![](img/deception.gif) 
+
+---
+# Défi 2 : le problème de la qualité
+.pull-left[
+>**Government data is usually incomplete, out of date, of low quality, and fragmented.** In most cases, open data catalogues or portals are manually fed as the result of informal data management approaches. **Procedures, timelines, and responsibilities are frequently unclear among government institutions tasked with this work.**
+.footnote[http://opendatabarometer.org/4thedition/report/]
+]
+.pull-right[
+![](img/odb.png)
+]
+
+---
+## Exemple de données ouvertes : la base SIRENE
+
+.reduite2[![](img/sirene.png)]
+---
+#La base SIRENE : exemple de cas d'utilisation
+
+.reduite[.center[![](img/ruesoif.png)]]
+---
+##Exemple de données ouvertes : la base adresses
+.reduite[.center[![](img/ban.png)]]
+
+---
+##Exemple de données ouvertes : les accidents de la route
+.reduite[.center[![](img/accidents.png)]]
+---
+#Les accidents de la route
+.reduite2[.center[![](img/trajetleplussur.png)]]
+.footnote[Plus d'accidents sur l'A8 mais surtout plus de véhicules…]
+---
+#Les accidents de la route
+.reduite2[.center[![](img/marsactu.png)]]
+.footnote[[Carte par Joël Gombin dans Marsactu](https://joelgombin.github.io/marsactu_accidents/chronique.html)]
+---
+## Exemple de données ouvertes : les inspections des restaurants
+.reduite2[.center[![](img/aliminfos.png)]]
+.footnote[[Résultats des contrôles officiels sanitaires : dispositif d'information « Alim’confiance »](https://www.data.gouv.fr/fr/datasets/resultats-des-controles-officiels-sanitaires-dispositif-dinformation-alimconfiance/)]
+---
+#Les inspections des restaurants
+.reduite2[.center[![](img/resto.png)]]
+.footnote[[26 établissements au niveau d'hygiène à corriger de manière urgent ](https://dgal.opendatasoft.com/explore/embed/dataset/export_alimconfiance/map/?disjunctive.app_libelle_activite_etablissement&disjunctive.filtre&refine.synthese_eval_sanit=A%20corriger%20de%20mani%C3%A8re%20urgente&location=6,47.24195,5.00977&static=false&datasetcard=true)]
+
+---
+## Big data
+![](http://www.usine-digitale.fr/mediatheque/0/3/5/000351530/big-data.jpg)
+---
+# L'obsession du volume de données
+.pull-left[
+**Quelques chiffres omniprésents** : 
+- le volume de données produit double tous les 3 ans (Gantz & Reisel 2011)
+- 90% des données créées dans les deux dernières années (IBM 2012)
+- 40% : croissance annuelle de la production de données (Maniyka et al. 2011) 
+
+**Problèmes de cette approche** : 
+- Estimations guidées par des intérêts commerciaux
+- Ne définit pas ce que sont ces données
+- Résume le big data au Volume
+-Explique mal la mise en données du monde
+]
+.pull-right[
+![](img/whybig.png)
+]
+---
+# Les promesses du big data
+Kitchin (2014) résume les promesses du big data : 
+- **“Governing people”** : dans la continuité de la statistique, améliorer la connaissance de l’administration et prédire les crimes
+
+- **“Managing organisations”** : améliorer le fonctionnement de toutes les composantes de l’organisation par l’exploitation des données
+
+- **“Leveraging value and producing capital”** : micro-ciblage marketing, optimisation des magasins et des opérations, efficience de la chaine
+
+- **“Creating Better places”** : gouverner les villes avec des données (smart city) 
+
+- **Un nouveau paradigme scientifique** : une nouvelle ère guidée par les corrélations
+
+
+---
+## Linked data
+.pull-left[
+- poussé par W3C et Tim Berners-Lee
+-
+- eb sémantique / web des données
+-
+ RDF / SPARQL
+-
+ wikidata => http://projetjourdain.org/network/index.html]
+
+.pull-right[
+![](http://linkeddata.org/static/images/lod-datasets_2009-07-14_cropped.png)
+]
+---
+[![](img/histro.png)](http://histropedia.com/timeline/3jrttpg9bg0t/Google)
+---
+## API
+.pull-left[
+- Application programming interface => un programme vu de la surface
+
+- les machines parlent aux machines
+
+- donnée dynamique => ouverture potentiellement limitée et contrôlée 
+
+- un exemple : [overpass turbo](https://overpass-turbo.eu/)]
+.pull-right[
+![](https://d1avok0lzls2w.cloudfront.net/img_uploads/apis-for-marketers.png)
+]
+---
+class:inverse, middle, center
+# Cadre juridique et protection de la vie privée
+
+---
+class:inverse, middle, center
+# Modèles économiques de l'open data et du big data
+
+---
+class:inverse, middle, center
+# Analyse de modèle économiques d'entreprises de la data
+
+
+
