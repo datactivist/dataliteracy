@@ -3,28 +3,46 @@
   <head>
     <title>De l’open data au big data</title>
     <meta charset="utf-8">
-    <meta name="author" content="Samuel Goëta" />
+    <meta name="author" content="Samuel Goëta et Joël Gombin" />
     <link href="libs/remark-css-0.0.1/example.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
-class: center, middle, inverse, title-slide
-
-# De l’open data au big data
-## Culture générale des données
-### Samuel Goëta
-### Paris, 29 janvier 2018
-
----
 
 class: center, middle
+background-image: url(./img/seurat.jpg)
+background-size: cover
+background-position: 50% 50%
 
-Ces slides en ligne : http://datactivist.coop/datalitteracy/
+# De l'open data au big data
+## Culture générale des données
+&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;
+## Samuel Goëta et Joël Gombin (Datactivist)
+
+### Paris, 29 et 30 janvier 2018
+
+---
+class: center, middle
+
+Ces slides en ligne : http://datactivist.coop/dataliteracy/
+
+Sources : https://github.com/datactivist/dataliteracy
+
+[Notes collaboratives](https://paper.dropbox.com/doc/Formation-Culture-Generale-des-Donnees-XjrveJ0tbnwsdhbOYLd8D?_tk=share_copylink)
 
 Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
 
 &lt;img src="./img/Logo_DATACTIVIST_TW.png" height="150px" /&gt;
+
+
+---
+class: middle, center
+
+# Jour 1 : 
+# comprendre l’écosystème des données
+
+
 ---
 class:middle
 # Programme de la matinée
@@ -778,11 +796,568 @@ class:inverse, middle, center
 ]
 
 https://frama.link/bmcanvas
----
-# Merci
 
-## class:inverse, middle, center
-Evaluation de la journée
+
+---
+class:inverse, middle, center
+
+# Merci !
+
+## Evaluation de la journée
+
+---
+class: middle, center
+
+# Jour 2 : 
+# ouvrir la boite noire de la data science
+
+
+---
+class:middle
+# Programme de la matinée
+
+- Qu'est-ce que la data science ?
+- Workshop 4 : quelles compétences recruter dans un projet de data science ?
+- Le data pipeline : acquérir les données, les vérifier, les nettoyer, les analyser, les présenter
+
+---
+class:middle
+# Programme de l'après midi
+
+- Workshop 5 : data visualisation : quel format et quel outil choisir pour quelle fonction ?
+- Modéliser pour prédire : introduction au machine learning et deep learning
+- Workshop 6 : décortiquons quelques algorithmes notoires
+
+---
+class: middle, center, inverse
+
+# Qu'est-ce que la data science ?
+
+---
+## Au commencement était la statistique
+
+- une vieille science (18e siècle), pour aider les États (_Statistik_) mais aussi des entreprises privées (au départ, les assureurs =&gt; actuariat)
+
+- fondée sur les probabilités
+
+- faite par des mathématiciens
+
+- forte dimension théorique
+
+---
+## Au commencement était la statistique
+
+&lt;iframe src="http://giphy.com/embed/9ADoZQgs0tyww" width="100%" height="450" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href="http://giphy.com/gifs/obama-awesome-statistics-9ADoZQgs0tyww"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+---
+## Au commencement était la statistique
+
+&gt; I keep saying the sexy job in the next ten years will be statisticians. People think I’m joking, but who would’ve guessed that computer engineers would’ve been the sexy job of the 1990s?
+
+Hal Varian (Chief economist, Google), _The McKinsey Quarterly_, January 2009
+
+---
+## Data science is the new statistics?
+
+&gt; “I think data-scientist is a sexed up term for a statistician”
+
+[Nate Silver](http://www.statisticsviews.com/details/feature/5133141/Nate-Silver-What-I-need-from-statisticians.html)
+
+---
+## Data science is the new statistics?
+
+[.reduite[.center[![](./img/data-science-venn-diagram.png)]]](http://www.prooffreader.com/2016/09/battle-of-data-science-venn-diagrams.html)
+
+---
+## Le rôle de l'informatique
+
+- statistique classique : les problèmes doivent pouvoir être résolus de manière analytique (d'où le succès du [fréquentisme](https://fr.wikipedia.org/wiki/Interpr%C3%A9tations_de_la_probabilit%C3%A9#Fr%C3%A9quentisme))
+
+- le développement de la puissance de calcul permet de résoudre des problèmes statistiques par la simulation ([MCMC](https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Monte-Carlo_par_cha%C3%AEnes_de_Markov))
+
+---
+## Développement de la puissance de calcul
+
+[.reduite[.center[![](./img/moore.png)]]](http://visual.ly/infographic-about-computers)
+
+---
+## Développement de la capacité de stockage
+
+[.reduite[.center[![](./img/altavista.png)]]](https://twitter.com/alicemazzy/status/655306196128280576?ref_src=twsrc%5Etfw)
+
+
+---
+## Développement de la capacité de stockage
+
+[.reduite[.center[![](./img/amazon.png)]]](https://aws.amazon.com/blogs/aws/aws-snowmobile-move-exabytes-of-data-to-the-cloud-in-weeks/)
+
+---
+## Développement de la capacité de stockage
+
+[.reduite[.center[![](./img/snowmobile.jpg)]]](https://aws.amazon.com/blogs/aws/aws-snowmobile-move-exabytes-of-data-to-the-cloud-in-weeks/)
+
+???
+
+Jusqu'à 100 Po par camion. 1 Po = 1000 To
+
+---
+## Développement de la capacité de stockage
+
+[.reduite[.center[![](./img/atacama.png)]]](https://aws.amazon.com/blogs/aws/aws-snowmobile-move-exabytes-of-data-to-the-cloud-in-weeks/)
+
+
+---
+## La simulation, méthode reine d'estimation statistique 
+
+Monte Carlo Markov Chain (MCMC) : papier de Metropolis et Ulam (1949)
+
+http://chifeng.scripts.mit.edu/stuff/mcmc-demo/#HamiltonianMC,banana
+
+---
+class:inverse, center, middle
+
+# Analyse, modélisation, machine learning
+
+---
+## Que fait-on une fois qu'on a des données ?
+
+- Exploratory Data Analysis (Tukey, 1977) : pas d'hypothèse préalable à tester, plutôt pour générer des hypothèses. Rôle de la datavisualisation 
+
+- test d'hypothèse
+
+---
+## Que fait-on une fois qu'on a des données ?
+
+.reduite[.center[![](./img/test.png)]]
+
+---
+## Que fait-on une fois qu'on a des données ?
+
+- Exploratory Data Analysis (Tukey, 1977) : pas d'hypothèse préalable à tester, plutôt pour générer des hypothèses. Rôle de la datavisualisation 
+
+- test d'hypothèse
+
+- **modèle**
+
+---
+class: inverse, center, middle
+
+# Workshop 4 : quelles compétences recruter dans un projet de data science ?
+
+
+---
+class: center, middle
+
+
+![](./img/competences1.png)
+
+
+(source : http://fing.org/?Les-competences-Data)
+
+
+---
+
+class: center, middle
+
+![](./img/competences2.png)
+
+
+---
+class: center, middle
+
+![](./img/competences3.png)
+
+
+---
+class: center, middle
+
+![](./img/competences4.png)
+
+
+---
+class: center, middle
+
+![](./img/competences5.png)
+
+---
+class: center, middle
+
+À vous : de quelles compétences data avez-vous besoin pour votre projet data ? 
+
+---
+class: center, middle, inverse
+
+# L'écosystème de la data science
+
+
+---
+## Bases de données
+
+Marché de ~ 25 milliards de $
+
+Oracle, Microsoft... MySQL, PostgreSQL, SQLite...
+
+DB orientées colonnes : MonetDB...
+
+NoSQL : MangoDB, CouchDB, BigTable (Google), Neo4j, Redis...
+
+---
+## Bases de données distribuées
+
+Hadoop / Cloudera 
+
+=&gt; MapReduce et HDFS
+
+---
+## Hadoop
+
+[![](./img/bigdata.jpeg)](https://www.chrisstucchio.com/blog/2013/hadoop_hatred.html)
+
+Voir aussi http://ismydatabig.com/
+
+---
+## Hadoop / MapReduce
+
+Permet une réelle scalabilité (ajoutons des nœuds), MAIS contraint fortement les algorithmes pouvant être utilisés, qui doivent être parallélisables. Ex : ACP =&gt; c'est compliqué
+
+---
+## Spark
+
+Principe similaire à Hadoop, mais travaille en mémoire vive de manière non séquentielle
+
+De 10 à 100x plus rapide que Hadoop
+
+---
+## Langages
+
+- Java
+- Python
+- R
+- Scala
+- Julia
+- SQL
+- C / C++
+- ...
+
+---
+## Une carte interactive 
+
+http://xyz.insightdataengineering.com/blog/pipeline_map.html
+
+
+---
+class: center, middle, inverse
+
+# Le data pipeline
+
+---
+
+.reduite[.center[![](./img/datapipeline.png)]]
+
+
+---
+## Définir les données dont on a besoin
+
+.center[![](./img/define.png)]
+
+---
+## Trouver les données dont on a besoin
+
+.center[![](./img/find.png)]
+
+???
+Où cherchez-vous vos données ?
+
+- dépôts internes
+- CDO
+- dépôts externes
+- data brokers
+- etc.
+
+---
+## Acquérir les données
+
+.center[![](./img/get.png)]
+
+???
+
+Connecteurs
+ETL : ex Talend, Logstash
+
+
+---
+## Vérifier les données
+
+.center[![](./img/verify.png)]
+
+
+
+???
+
+Importance d'un sanity check
+
+---
+## Vérifier les données
+
+.center[[![](./img/sanity.jpg)](http://www.erogol.com/ml-work-flow-part-4-sanity-checks-data-spliting/)]
+
+
+
+---
+## Nettoyer les données
+
+.center[![](./img/clean.png)]
+
+
+???
+
+Paradigme du *tidy data* 
+
+---
+## Analyser les données
+
+.center[![](./img/analyse.png)]
+
+---
+## Communiquer les résultats
+
+.center[![](./img/present.png)]
+
+???
+
+dataviz
+reproducible research
+appli
+dashboard
+etc.
+
+---
+
+class: inverse, center, middle
+
+# Workshop 5 : Introduction à la data visualisation
+
+[datactivist
+.coop/odl_paca](https://datactivist.coop/odl_paca)
+
+
+
+---
+## Pourquoi modéliser ?
+
+.reduite[.center[![](./img/Hibbs.jpg)]]
+
+
+---
+## Pourquoi modéliser ? Les ["deux cultures"](https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726)
+
+- pour analyser et expliquer
+
+- pour prédire
+
+---
+## Pourquoi modéliser ? Les ["deux cultures"](https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726)
+
+- pour analyser et expliquer (**statistiques classiques, économétrie**)
+
+- pour prédire (**machine learning, IA...**)
+
+---
+## Modéliser pour analyser
+
+- un modèle réduit de la réalité
+
+- isoler le rôle de chaque variable
+
+- raisonner "toutes choses égales par ailleurs" (*ceteris paribus*)
+
+---
+## Modéliser pour analyser
+
+Modéliser, c’est mettre en relation une *variable expliquée*
+(dépendante / prédite) et une ou plusieurs *variables explicatives*
+(indépendantes / prédicteurs).
+
+$$ Y = f(X_1, X_2, X_3, ..., X_n) $$
+
+L’estimation du modèle consiste à estimer la valeur des paramètres
+(ou coefficients). Le cas du modèle linéaire :
+
+$$ Y = α + β_1X_1 + β_2X_2 + β_3X_3 + · · · + β_nX_n + ε $$
+
+---
+## Modéliser pour analyser
+
+Implique de faire des hypothèses sur la spécification du modèle :
+
+- variables explicatives
+
+- distribution des erreurs
+
+---
+## Les distributions
+
+- distribution théorique (ex : distribution normale)
+
+- distribution empirique
+
+http://shiny.stat.calpoly.edu/Prob_View/
+
+---
+## All models are wrong, some are useful
+
+&gt; Since all models are wrong the scientist cannot obtain a "correct" one by excessive elaboration. On the contrary following William of Occam he should seek an economical description of natural phenomena. 
+
+[George Box](https://dx.doi.org/10.1080%2F01621459.1976.10480949)
+
+---
+## All models are wrong, some are useful
+
+.reduite[.center[![](./img/ockham.jpg)]]
+
+---
+## Estimation d'un modèle
+
+Dans le cas d'un modèle linéaire =&gt; méthode des moindres carrés ordinaires (MCO/OLS)
+
+http://setosa.io/ev/ordinary-least-squares-regression/
+
+---
+## Attention !
+
+- Les modèles de régression linéaire supposent que les relations
+sont *linéaires* et *additives*.
+
+- Les *résidus* sont supposés être *normalement distribués*.
+
+- Les coefficients ne sont *pas standardisés* (on ne peut pas les
+comparer entre eux).
+
+- Les coefficients s’interprètent *relativement à l’unité de la variable dépendante*.
+
+---
+## Attention !
+
+- Les coefficients estiment l’effet d’une variable indépendante
+sur la variable dépendante *toutes choses égales par ailleurs*,
+c’est-à-dire en neutralisant l’effet des autres variables.
+
+- La qualité globale du modèle peut être quantifié au travers du
+`\(R^2\)`, qui représente la part de variance (de la variable
+dépendante) expliquée.
+
+- Pour les variables indépendantes catégoriques, on estime un
+coefficient par modalité, à l’exception de la première
+(baseline).
+
+---
+## Modèles statistiques
+
+Compromis entre intelligibilité et fidélité aux données
+
+---
+## Underfitting et overfitting
+
+.reduite[.center[![](./img/underfit.png)]]
+
+---
+## Underfitting et overfitting
+
+- différencier données d'apprentissage et données de test 
+
+- n'utiliser les données de confirmation (test) qu'une fois 
+
+---
+## Extrapolation
+
+[.reduite[.center[![](./img/sinus.png)]]](http://r4ds.had.co.nz/model-basics.html)
+
+---
+## Et le machine learning alors ?
+
+- Fondamentalement, modélisation et machine learning ne sont pas différents, du point de vue d'un statisticien : modéliser un `\(Y\)` en fonction d'un vecteur de `\(X_i\)`
+
+- une des différences principales toutefois : veut-on prévoir ou comprendre/analyser ?
+
+- et donc : peut-on, veut-on interpréter les coefficients ?
+
+- en pratique : machine learning porte généralement sur des données plus complexes que la modélisation traditionnelle
+
+- souvent beaucoup de valeurs manquantes 
+
+---
+## Et le machine learning alors ?
+
+.reduite[.center[![](./img/ratings.png)]]
+
+---
+## Concepts de machine learning
+
+- Apprentissage supervisé vs non supervisé 
+
+- Apprentissage supervisé : il faut des données déjà classées/étalonnées. Souvent à la main ! =&gt; *#digitallabour*
+
+---
+## Apprentissage supervisé 
+
+[.reduite[.center[![](./img/captcha.jpg)]]](https://fakecaptcha.com)
+
+---
+## Apprentissage supervisé
+
+[.reduite[.center[![](./img/opensolarmap.png)]]](https://cquest.hackpad.com/OpenSolarMap-9oMiYswLksF)
+
+---
+## Apprentissage supervisé
+
+[.reduite[.center[![](./img/inbox.png)]]](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36955.pdf)
+
+---
+## Apprentissage non supervisé 
+
+
+- problème majeur : réduction de la dimensionnalité
+
+- jeux de données à très haute dimensionnalité : impossible à explorer visuellement. Comment simplifier l'information et la résumer ?
+
+.reduite[.center[![](./img/house.png)]]
+
+---
+## Apprentissage non supervisé 
+
+https://gallery.shinyapps.io/LDAelife/
+
+
+---
+class: inverse, center, middle
+# Workshop 6 : décryptons quelques algorithmes
+
+
+---
+## Décryptons quelques algorithmes
+
+- choisissez un cas d'usage
+- quelles données utilisées ?
+- connait-on l'algorithme utilisé ?
+- que fait l'algorithme des données ?
+- est-on capable d'expliquer les décisions prises par l'algorithme ?
+- quels biais et limites l'algorithme présente-t-il ?
+- où est la valeur ? Dans l'algorithme ou dans les données ?
+- qui crée cette valeur ?
+- etc. 
+
+---
+## Décryptons quelques algorithmes
+
+Le cas d'APB, [décrypté par Cédric Villani](http://www.lemonde.fr/idees/article/2017/12/06/cedric-villani-ce-qui-a-bugge-dans-apb-ce-n-est-pas-le-logiciel-mais-bien-l-etat_5225204_3232.html)
+
+
+---
+class: inverse, center, middle
+
+# Merci !
+
+## Évaluation de la journée
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
@@ -790,7 +1365,8 @@ Evaluation de la journée
 "highlightLines": true,
 "countIncrementalSlides": false
 });
-if (window.HTMLWidgets) slideshow.on('showSlide', function (slide) {setTimeout(function() {window.dispatchEvent(new Event('resize'));}, 100)});</script>
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -804,7 +1380,7 @@ MathJax.Hub.Config({
 (function () {
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src  = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
   if (location.protocol !== 'file:' && /^https?:/.test(script.src))
     script.src  = script.src.replace(/^https?:/, '');
   document.getElementsByTagName('head')[0].appendChild(script);
