@@ -757,7 +757,7 @@ class:inverse, middle, center
 - 🚰 Sources : données publiques (permis de construire, registres des naissances, casiers judiciaires…), cookies, données d'achat, cartes de fidélité, données téléphoniques, recherches en ligne…
 
 ---
-# Une déposession de la vie privée
+# Une dépossession de la vie privée
 .pull-left[
 > "*Data brokers take public and private information, aggregate it into products and monetize it. *[…]
 
