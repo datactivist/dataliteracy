@@ -29,7 +29,7 @@ background-position: 50% 50%
 ---
 class: center, middle
 
-Ces slides en ligne : http://datactivist.coop/dataliteracy/
+Ces slides en ligne : https://datactivist.coop/dataliteracy/
 
 Sources : https://github.com/datactivist/dataliteracy
 
@@ -545,7 +545,7 @@ class:middle, center
 
 ---
 ## Big data
-![](http://www.usine-digitale.fr/mediatheque/0/3/5/000351530/big-data.jpg)
+![](https://www.usine-digitale.fr/mediatheque/0/3/5/000351530/big-data.jpg)
 ---
 # L'obsession du volume de données
 .pull-left[
@@ -783,7 +783,7 @@ class:inverse, middle, center
 Utiliser des données pour soutenir un modèle économique, acquérir ou défendre une position au sein d'un écosystème
 ]
 .pull-right[
-![](http://www.optasports.fr/ImageGen.ashx?image=/media/456897/broadcast.jpg&width=646&height=294)
+![](./img/gps.png)
 ]
 ---
 class:inverse, middle, center
@@ -851,7 +851,7 @@ class: middle, center, inverse
 ---
 ## Au commencement était la statistique
 
-<iframe src="http://giphy.com/embed/9ADoZQgs0tyww" width="100%" height="450" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/obama-awesome-statistics-9ADoZQgs0tyww">via GIPHY</a></p>
+<iframe src="http://giphy.coms/embed/9ADoZQgs0tyww" width="100%" height="450" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/obama-awesome-statistics-9ADoZQgs0tyww">via GIPHY</a></p>
 
 ---
 ## Au commencement était la statistique
