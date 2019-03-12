@@ -214,7 +214,7 @@ Jeff Brookes, éditorialiste du New York Times
 
 > Data need to be imagined _as_ data to exist and function as such, and the imagination of data entails an interpretive base.]
 .pull-right[
-![](https://mitpress.mit.edu/sites/default/files/9780262518284_0.jpg)]
+![](https://mitpress.mit.edu/sites/default/files/styles/large_book_cover/http/mitp-content-server.mit.edu%3A18180/books/covers/cover/%3Fcollid%3Dbooks_covers_0%26isbn%3D9780262518284%26type%3D.jpg?itok=PQI0SkzN)]
 
 .footnote[[Source](https://mitpress.mit.edu/books/raw-data-oxymoron)]
 ---
