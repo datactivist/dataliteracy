@@ -4,16 +4,48 @@ subtitle: "Culture générale des données"
 author: "Samuel Goëta et Joël Gombin"
 date: "Paris, 29 et 30 janvier 2018"
 output:
-  xaringan::moon_reader:
+  SlidesDatactivist::moon_reader:
     seal: false
-    css: [default, xaringan.css]
+    css: [default, datactivist, datactivist-fonts]
     lib_dir: libs
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-
+      beforeInit: ["macros.js", "matomo.js", "https://platform.twitter.com/widgets.js"]
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>`
+params:
+  event: Formation à la data literacy
+  slug: dataliteracy
+  description: Les bases de la culture générale des données - une formation de Datactivist
+  title: De l'open data au big data
+  image: https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png
+  image_alt: le logo de Datactivist
 ---
+
+```{r, echo=FALSE}
+library(metathis)
+meta() %>% 
+  meta_description(params$event) %>% 
+  meta_name("github-repo" = paste0("datactivist/", params$slug)) %>% 
+  meta_viewport() %>% 
+  meta_social(
+    title = params$title,
+    url = paste0("https://datactivist.coop/", params$slug),
+    image = params$image,
+    image_alt = params$image_alt,
+    og_type = "website",
+    og_author = "Datactivist",
+    twitter_card_type = "summary",
+    twitter_creator = "@datactivi_st")
+
+```
+
+
 class: center, middle
 background-image: url(./img/seurat.jpg)
 background-size: cover
@@ -1141,8 +1173,7 @@ class: inverse, center, middle
 
 # Workshop 5 : Introduction à la data visualisation
 
-[datactivist
-.coop/odl_paca](https://datactivist.coop/odl_paca)
+[datactivist.coop/odl_paca](https://datactivist.coop/odl_paca)
 
 
 
